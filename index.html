@@ -1,0 +1,1299 @@
+<html>
+   <head>
+    <title>Lifestyle Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         
+         @media all and (min-width:960px){
+             html{
+                 scroll-behavior: smooth;
+                 font-size:62.5%;
+             
+             }
+         }
+         @media all and (max-width:959px){
+             html{
+                scroll-behavior: smooth;
+                 font-size:55%;
+                
+             }
+         }
+         @media all and (max-width:780px){
+             html{
+                scroll-behavior: smooth;
+                 font-size:45%;
+                 
+             }
+         }   
+        /* @media all and (max-width:600px){
+             html{
+                scroll-behavior: smooth;
+                 font-size:30%;
+             }
+         }*/
+         @keyframes logomove{
+             from {left:0%}
+             to {left:30%}
+         }
+
+         @keyframes motomove{
+             from {right:0%}
+             to {right:43%}
+         }
+
+         
+        #log{
+              position:absolute;top:30%; font-size:4.8rem; animation: logomove; animation-timing-function:ease; animation-duration: 0.5s; 
+              animation-iteration-count:2;animation-direction: alternate; width:100%;text-align: center;color:white;
+              } 
+
+              @media all and (max-height:830px){
+                  #log{
+                      top:20%;
+                  }  
+                            
+              }  
+              @media all and (min-width:500px){
+                  #log{
+                      top:30%;
+                  }  
+                            
+              }   
+         #mot{
+              font-size: 3.2rem; position: absolute;top:50%; animation: motomove; animation-timing-function:ease; animation-duration: 0.5s;
+              animation-iteration-count:2;animation-direction: alternate; width:100%;text-align: center;color:white;
+              }
+
+         .logo{
+                height: 50px; font-size: 4.5rem; font-weight: bold; color:white; display:inline-block; text-align: center;
+                position: absolute;
+                top:18%;
+            }
+         .banner-image{
+            position:relative; text-align: center; color: #240707;
+            background-color: rgba(17, 0, 255, 0.75); height:100vh;
+             z-index: 0;
+            }
+           
+           .header-link{
+                float:left; font-size:3rem; height: 50px; padding: 15px 15px; font-size:1.6rem; font-weight: bold;
+                
+            }  
+            #menuToggle
+             {
+               display: block;
+               position: fixed;
+               top: 50px;
+               left: 50px;
+               z-index: 50;
+  
+              -webkit-user-select: none;
+              user-select: none;
+            }
+
+            #menuToggle a
+            {
+              text-decoration: none;
+              color:white;
+  
+              transition: color 0.3s ease;
+            }
+
+            #menuToggle a:hover
+           {
+            color:orange;
+           }
+
+
+           #menuToggle input
+          {
+           display: block;
+           width: 40px;
+           height: 32px;
+           position: absolute;
+           top: -7px;
+           left: -5px;
+  
+           cursor: pointer;
+  
+           opacity: 0; 
+           z-index: 2; 
+  
+          -webkit-touch-callout: none;
+          }
+
+
+          #menuToggle span
+         {
+           display: block;
+           width: 33px;
+           height: 4px;
+           margin-bottom: 5px;
+           position: relative;
+           background:white;
+           border-radius: 3px;
+  
+           z-index: 1;
+  
+           transform-origin: 4px 0px;
+  
+           transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+           background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+           opacity 0.55s ease;
+         }
+
+          #menuToggle span:first-child
+         {
+           transform-origin: 0% 0%;
+         }
+
+         #menuToggle span:nth-last-child(2)
+        {
+           transform-origin: 0% 100%;
+        }
+
+
+        #menuToggle input:checked ~ span
+       {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+  
+       }
+
+ 
+         #menuToggle input:checked ~ span:nth-last-child(3)
+       {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+       }
+
+
+       #menuToggle input:checked ~ span:nth-last-child(2)
+      {
+         transform: rotate(-45deg) translate(0, -1px);
+      }
+
+
+       #menu
+     {
+      position: absolute;
+      width: 300px;
+      margin: -100px 0 0 -50px;
+      padding: 50px;
+     padding-top: 125px;
+  
+      background: #0d28c4;
+      opacity:80%;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+  
+  
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+  
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+     #menu li
+    {
+     padding: 10px 0;
+     font-size: 22px;
+    }
+
+
+     #menuToggle input:checked ~ ul
+    {
+      transform: none; 
+    }
+ 
+
+       /* .nav{
+                position:fixed; border-radius:50px; background-color:rgb(0, 110, 255); opacity:80%; text-align: center; 
+                 width: 100%; height: 50px; z-index: 20;
+            }*/
+
+
+        .button{
+             position:relative;top:65%; text-align: center; height:3%; max-width:20%;
+             text-decoration:none;display:inline-block; color: #fff;  background-color: #4CAF50;
+              border-color: #ac2925; box-shadow: inset 0 5px 7px rgba(55, 127, 160, 0.3);
+              padding-left: 16px;padding-top:14px;padding-bottom: 14px; padding-right:16px; font-size: 1.8rem; border-radius: 100px;
+              text-decoration: none;
+            }
+            
+      
+            .button:hover{
+                background-color: #45a049;
+            }
+            .button-link{
+                color:white;
+                text-decoration: none;
+            }
+            @keyframes COVID19{
+               0% {color:red;}
+               50%{color:yellow;}
+               100%{color:white;}
+
+            } 
+            .COVID{
+                animation:COVID19;
+                animation-duration: 0.5s;
+                text-decoration: none;
+                font-size: 2rem;
+                animation-iteration-count: infinite;
+            }   
+
+        #intro{
+            font-size: 2rem;
+            
+            font-weight:bold;
+            
+           }
+           .content{
+                min-height: 600px;
+                
+            }
+        #launch{
+            position:relative;
+            text-align: center;
+          /*  background-color: cornflowerblue;*/
+          background-color: rgba(17, 0, 255, 0.75);
+            height: 80%;
+
+        } 
+        .launch_photo{
+            display:block;
+            margin: 0 auto;
+            position:absolute;
+            width:30%;
+            z-index: 10;
+            transition:all 0.2s;
+            margin-bottom: 6rem;
+            border-radius: 2rem;
+        }
+        .launch_photo:hover{
+            transform:scale(1.1) translateY(-1.5rem);
+            z-index: 20;
+        }
+        #launch:hover .launch_photo:not(:hover){
+            transform: scale(0.95);
+        }
+        .heading{
+            font-size:4rem;
+            font-weight: 700;
+           /* color:rgb(0, 225, 255);*/
+            color:white;
+            letter-spacing:2px;
+            margin-bottom:6rem;
+            padding-top:4rem;
+            transition:all 0.2s
+        }
+        .heading:hover{
+            transform: skewY(2deg) skewX(2deg) scale(1.1);
+            text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, .3);
+            font-size: 4.5rem;
+           /* color:rgb(0, 255, 170);*/
+        }
+        .launch_text{
+            font-size: 2.5rem;
+            color:white;
+           /* color:rgb(0, 255, 170);*/
+            font-weight:600;
+            display:inline-block;
+            position: absolute;
+            top:75%;
+            text-align: center;
+            right:5%;
+            left:5%;
+        }
+        @media all and (max-height:1376px){
+                  .launch_text{
+                      top:50%;
+                  } 
+        @media all and (min-width:1376px){
+                  .launch_text{
+                      top:75%;
+                  }  
+                            
+              }   
+                            
+              }  
+        .launch_photo_1{
+           left:15%;
+        }
+
+        .launch_photo_2{
+            left:40%;
+        }
+        .launch_photo_3{
+            right:15%;
+        }
+       
+        
+
+            .link{
+                  color:white;
+                  height:40px;
+                  text-decoration:none;
+                  margin-bottom:1rem;
+                  
+              }
+              a:hover,link1:hover,link2:hover,link3:hover{
+                  
+                  color:orange;
+                  height:40px;
+                  text-decoration:none;
+              }
+              a:active,link1:hover,link2:hover,link3:hover{
+                  color:yellowgreen;
+                  height:40px;
+                  text-decoration:none;
+              } 
+
+           #surprise{
+            position:relative;
+             text-align: center;
+             background-color: rgba(17, 0, 255, 0.75); 
+            /* background: url("C:/Users/dell/Desktop/WebDev/KTJ_Web/Assignment1/surprise1.jpg") no-repeat center ;*/
+             height:100vh;
+             background-size: cover;
+            
+            
+            } 
+
+           /* .surprise_heading{
+                font-size:4rem;
+                font-size:4rem;
+                font-weight: 700;
+                color:whitesmoke;
+                letter-spacing:2px;
+                margin-bottom:6rem;
+                padding-top:4rem;
+                
+            
+            } */
+            
+            .surprise_box{
+                width:20%;
+                height:75%;
+                background-color:rgba(0, 255, 242,0.75);
+                display:inline-block;
+                margin-left:3rem;
+                border-radius: 2rem;
+                overflow:hidden;
+                transition: all 0.2s;  
+            } 
+            @media all and (max-height:830px){
+                  .surprise_box{
+                      width:70%;
+                      height:60%;
+                      margin-bottom:5rem;
+                    } 
+                    .PID_box{
+                        width:70%;
+                        height:40%;
+                        margin-bottom:5rem;
+                    } 
+                   #surprise{
+                       overflow: scroll;
+                   }
+
+                   #PID,.PID_1,.PID_2{
+                      overflow: scroll;
+                  }
+                   .pop-up_text{
+                       font-size: 2rem;
+                   }
+                   .pop-up_head{
+                       font-size: 3rem;
+                   }
+                   .pop-up_close{
+                       font-size: 3.5rem;
+                   }
+                            
+              }  
+            @media all and (min-width: 500px){
+                  .surprise_box{
+                      width:20%;
+                      height:75%;
+                      
+                  } 
+                  .PID_box{
+                      width:20%;
+                      height:55%;
+                  }
+                  #PID,.PID_1,.PID_2{
+                      overflow: hidden;
+                  }
+                  #surprise{
+                      overflow: hidden;
+                  } 
+
+                  .pop-up_text{
+                      font-size: 3rem;
+                  }
+
+                  .pop-up_head{
+                       font-size: 4rem;
+                   }
+                   .pop-up_close{
+                       font-size: 3rem;
+                   }
+                            
+              }    
+            
+            .surprise_box:hover{
+                transform: scale(1.1) translateY(-1.5rem);
+            }
+            .surprise_box:hover .surprise_button{
+               visibility: visible;
+            }       
+              
+              .surprise_image{
+                  height:40%;
+                  width:100%
+
+              }
+             
+
+            .surprise_button{
+               background-color: rgba(204, 20, 20, 0.863);
+               width:100%;
+               height:21%;
+               text-align:center;
+               position: relative;
+               visibility:hidden;
+               transition: all 0.2s;
+            } 
+            .surprise_text{
+                font-weight: 600;
+                font-size:3rem;
+                color:rgba(126, 9, 9, 0.863);
+                padding-top:2rem;
+                margin-bottom:2rem;
+            } 
+
+            .surprise_link{
+                  color:white;
+                  font-size:3rem;
+                  font-weight:600;
+                  position: absolute;
+                  top:33%;
+                  left:25%;
+                  text-decoration:none;
+                  
+                  
+              }
+              a:hover{
+                  
+                  color:orange;
+                  
+                  text-decoration:none;
+              }
+              a:active{
+                  color:yellowgreen;
+                  
+                  text-decoration:none;
+              } 
+
+              #pop-up1{
+                  background-color: rgba(0, 0, 0, 0.8);
+                  width:100%;
+                  height:100vh;
+                  position:absolute;
+                  top:0;
+                  left:0;
+                  opacity:0;
+                  visibility: hidden;
+                  overflow: scroll;
+                  transition:all .5s;
+
+              }
+              #pop-up2{
+                  background-color: rgba(0, 0, 0, 0.8);
+                  width:100%;
+                  height:100vh;
+                  position:absolute;
+                  top:0;
+                  left:0;
+                  opacity:0;
+                  visibility: hidden;
+                  overflow:scroll;
+                  transition:all .5s;
+               }
+               #pop-up3{
+                  background-color: rgba(0, 0, 0, 0.8);
+                  width:100%;
+                  height:100vh;
+                  position:absolute;
+                  top:0;
+                  left:0;
+                  opacity:0;
+                  visibility: hidden;
+                  overflow:scroll;
+                  transition:all .5s;
+               }
+              .pop-up_box{
+                  width:75%;
+                  height:65%;
+                  background-color:white;
+                  position: absolute;
+                  top:50%;
+                  left:50%;
+                  transform:translate(-50%,-50%);
+                  padding:2rem;
+                  border-radius: 2 rem;
+                  opacity: 0;
+                  visibility: hidden;
+                  overflow:scroll;
+                  transition: all .5s;
+              }
+              .pop-up_close{
+                  color:rgba(0, 0, 0, .8);
+                  font-size:3rem;
+                  position: absolute;
+                  top:.5rem;
+                  right:1rem;
+              }
+              #pop-up1:target{
+                 opacity:1;
+                 visibility: visible;
+              }
+              #pop-up1:target .pop-up_box{
+                  opacity:1;
+                  visibility: visible;
+              }
+              #pop-up2:target{
+                 opacity:1;
+                 visibility: visible;
+              }
+              #pop-up2:target .pop-up_box{
+                  opacity:1;
+                  visibility: visible;
+              }
+              #pop-up3:target{
+                 opacity:1;
+                 visibility: visible;
+              }
+              #pop-up3:target .pop-up_box{
+                  opacity:1;
+                  visibility: visible;
+              }
+              
+              .image-popup{
+                  height:40%;
+                  width:30%;
+                  display:inline-block;
+                  position: absolute;
+                  left:5%;
+                  top:10%;
+
+              }
+              
+              .pop-up_text{
+                  padding-left: 40%;
+                  display:inline-block;
+                  font-size: 3rem;
+                  color:rgba(27, 167, 160, 0.75);
+                  font-weight: 600;
+
+              }
+              .pop-up_head{
+                  font-size: 4rem;
+                  font-weight: 700;
+                  letter-spacing:1 rem;
+              }
+
+              #PID{                                    /*PID-Products In Demand*/
+                 /* background-color: cornflowerblue;*/
+                 background-color: rgba(17, 0, 255, 0.75);
+                  height: 100vh;
+                  text-align: center;
+                  background-size: cover;
+                  overflow: scroll;
+              }
+
+              #PID::-webkit-scrollbar{
+                  display:none;
+              }
+            
+               /*  .PID_head{
+                  color:red ;
+                  color:white;
+                  
+                  font-size:4rem;
+                  font-size:4rem;
+                  font-weight: 700;
+                  letter-spacing:2px;
+                  margin-bottom:6rem;
+                  padding-top:4rem;
+                
+              }*/
+
+              .PID_box{
+                width:20%;
+                height:55%;
+                background-color:rgba(0, 255, 242,0.75);
+                display:inline-block;
+                margin-left:3rem;
+                border-radius: 2rem;
+                overflow:hidden;
+                transition: all 0.2s;
+                 
+            } 
+
+            .PID_image{
+                  padding-top: 2rem;
+                  height:35%;
+                  width:60%;
+                  border-radius:50%;
+              }
+            
+            .PID_box:hover{
+                transform: scale(1.1) translateY(-1.5rem);
+            }
+           
+
+            .checked{
+                color:orange;
+            }
+
+            .star_size{
+                font-size: 3rem;
+            }
+            
+            @media all and (max-height:830px){
+                 
+                    .PID_box{
+                        width:70%;
+                        height:40%;
+                        margin-bottom:5rem;
+                    } 
+                  
+
+                  
+                  
+              }  
+            @media all and (min-width: 500px){
+                 
+                  .PID_box{
+                      width:20%;
+                      height:55%;
+                  }
+                 
+                 
+              }    
+
+            #reviews,.reviews1{
+             position:relative;
+             text-align: center;
+             background-color: rgba(17, 0, 255, 0.75); 
+            /* background: url("../Assignment1/baloon.jpg") no-repeat center ;*/
+             height:100vh;
+             background-size: cover;
+             transition: all 0.2s;
+            }
+
+            .rev-box{
+                  width:75%;
+                  height:65%;
+                  background-color:rgba(0, 255, 242,0.75);
+                  position:absolute;
+                  top:50%;
+                  left:50%;
+                  transform:translate(-50%,-50%);
+                  padding:2rem;
+                  border-radius: 4rem;
+                  transition: all 0.2s ;
+                 
+            }
+            @media all and (max-width:500px){
+                .rev-box{
+                    overflow: scroll;
+                }
+            }
+            .rev-img{
+                  height:40%;
+                  width:30%;
+                  display:inline-block;
+                  position: absolute;
+                  left:5%;
+                  top:10%;
+                  z-index: 2;
+            }
+            .patch{
+                  height:40%;
+                  width:30%;
+                  display:inline-block;
+                  position: absolute;
+                  left:5%;
+                  top:10%;
+                  background-color: green;
+                  z-index:1;
+                  opacity:0.75;
+                  text-align: center;
+                  
+            }
+            .patch-text{
+                  color: white;
+                  font-size: 3rem;
+                  margin-top:25%;
+            }
+            .rev-img:hover {
+                z-index:0;
+            }
+            .rev-text{
+                  margin-top:8%;
+                  padding-left: 40%;
+                  display:inline-block;
+                  font-size: 4rem;
+                  color:rgb(77, 196, 21);
+                  font-weight: 600;
+            }
+
+            #add_rev{
+                 /* background-color: cornflowerblue;*/
+                 background-color: rgba(17, 0, 255, 0.75);
+                  height: 100vh;
+                  background-size: cover;
+                  position:relative;
+            }
+
+            label{
+                font-size: 3rem;
+                font-weight: 600;
+                color: rgba(17, 17, 15, 0.788);
+                margin-top:4rem;
+                margin-bottom: 8rem;
+            }
+            input[type=text] {
+                width:50%;
+                margin-left:5%;
+                border:1px solid #ccc;
+                border-radius:1rem;
+                resize:vertical;
+                font-size: 3rem;
+                font-weight: 500;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                height:8%;
+                opacity: 80%;
+            }
+            textarea{
+                width:80%;
+                margin-left:5%;
+                height:30%;
+                border-radius: 1rem ;
+                font-size:3rem;
+                opacity:80%;
+                font-weight: 500;
+                margin-top:2rem;
+            }
+            input[type="submit"]{
+                position:absolute;
+                bottom:4%;
+                right:2%;
+                background-color: #4CAF50;
+                color:white;
+                font-size:2rem;
+                text-align: center;
+                float:right;
+                margin-right:4%;
+                border:none;
+                border-radius:0.5rem;
+                cursor:pointer;
+                margin-top: 2rem;
+                height:10%;
+               max-width:25%;
+            }
+            input[type="submit"]:hover{
+                background-color: #45a049;;
+            }
+            #footer{
+                background-color: #4CAF50;
+                height:50%;
+                background: cover;
+                width:100%;
+                position: relative;
+            }
+            .brand{
+                font-size:8rem;
+                color:white;
+                font-weight: 700;
+                float:left;
+               position:absolute;
+               top:15%;
+               left:2rem;
+            }
+           
+
+            .copyright1{
+                font-size:3rem;
+                font-weight:700;
+                color:white;
+                position: absolute;
+                top:47%;
+                left:2rem;   
+            }
+
+            .copyright2{
+                font-size:3rem;
+                font-weight:700;
+                color:white;
+                position: absolute;
+                top:65%;
+                left:2rem;
+            }   
+
+            .link1{
+                font-size:3rem;
+                font-weight:700;
+                color:white;
+                position:absolute;
+                top:28%;
+                right:2rem;
+                text-decoration: none;
+            } 
+
+            .link2{
+                font-size:3rem;
+                font-weight:700;
+                color:white;
+                position:absolute;
+                top:46%;
+                right:2rem;
+                text-decoration: none;
+            }
+
+            .link3{
+                font-size:3rem;
+                font-weight:700;
+                color:white;
+                position:absolute;
+                top:64%;
+                right:2rem;
+                text-decoration: none;
+            }
+
+           @media all and (max-width:400px){
+               .brand{
+                   font-size:5rem;
+               }
+           }
+
+            @media all and (max-width:500px){
+                .brand{
+                    font-size: 5rem;
+                }
+                .copyright1{
+                    font-size:2.5rem;
+                    top:40%;
+                }
+                .copyright2{
+                    font-size: 2.5rem;
+                    top:50%;
+                }
+
+                .link1{
+                    font-size:2.5rem;
+                    top:40%;
+                }
+                .link2{
+                    font-size:2.5rem;
+                    top:50%;
+                }
+                .link3{
+                    font-size:2.5rem;
+                    top:60%;
+                }
+            }
+
+            .button2{
+                position:fixed;
+                height:5%;
+                bottom:5%;
+                max-width:25%;
+                opacity:80%;
+                right:3%;
+                background-color: #4CAF50;
+                text-align:center;
+                border-radius: 100px;
+                padding-top: 1%;
+               
+            }
+            .button2-link{
+                text-decoration: none;
+                color:white;
+                font-size:2rem;
+                font-weight: bold;
+                
+               
+                
+
+            }
+
+
+            
+            
+    </style>
+   </head>
+
+   <body>
+
+    <nav role="navigation">
+        <div id="menuToggle">
+         
+          <input type="checkbox" />
+          
+          
+          <span></span>
+          <span></span>
+          <span></span>
+          
+         
+          <ul id="menu">
+            <div class="logo">Lifestyle Store</div>      
+            <div class="header-link"><a class="link" href="#intro"><li>Intro</li></a></div>
+            <div class="header-link"><a class="link" href="#launch"><li>Launching Soon</li></a></div>
+            <div class="header-link"><a class="link" href="#surprise"><li>Surprise</li></a></div>
+            <div class="header-link"><a class="link" href="#PID"><li>In Demand</li></a></div>
+            <div class="header-link"><a class="link" href="#reviews"><li>Reviews</li></a></div>
+            <div class="header-link"><a class="link" href="#add_rev"><li>Add Review</li></a></div>
+            <div class="header-link"><a class="link" href="#footer"><li>Footer</li></a></div>
+            <div class="header-link"><a class="COVID" href="https://www.google.com/covid19/" target="_blank"><li>COVID-19</li></a></div>
+          </ul>
+        </div>
+      </nav>
+       
+       <div class="content">
+          <div id="intro" class="banner-image">
+             <div id="log"><h1>Lifestyle Store</h1></div>
+             <div id="mot"><h3>We Sell Lifestyle</h3></div>
+             <div class="button"><a class="button-link" href="#surprise">SURPRISES!!</a></div>
+         </div>
+
+         <div id="launch">
+             <div class="heading">UPCOMING LAUNCHES!!</div>
+             
+            <div><img src="..\Assignment1\1.jpg" alt="photo 1" class="launch_photo launch_photo_1"></div>
+            <div><img src="..\Assignment1\8.jpg" alt="photo 2" class="launch_photo launch_photo_2"></div>
+            <div><img src="..\Assignment1\7.jpg" alt="photo 3" class="launch_photo launch_photo_3"></div>
+             
+            <div class="launch_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dignissimos atque unde eaque,
+                 doloribus ullam placeat, minus
+                 totam sit quae provident quo velit quaerat ex eveniet eum numquam perspiciatis Lorem ipsum dolor, sit amet 
+                 consectetur adipisicing elit. Provident quae praesentium quas, animi rerum repellendus architecto officiis l
+                 aboriosam illum nobis, 
+                
+            </div>
+         </div>
+
+           <div id="surprise">
+             <div class="heading">
+                  <div>LIMITED TIME OFFER-JUST FOR YOU!!</div>
+             </div>
+             <div >
+                  <div class="surprise_box">
+                    <div><img src="..\Assignment1\5.jpg" alt="img1" class="surprise_image"></div>
+                    <div class="surprise_text">Cannon X40</div>
+                    <div class="surprise_text"><strike><span>&#8377</span>45000</strike></div>
+                    <div class="surprise_text"><span>&#8377</span>30000</div>
+                    <div class="surprise_button">
+                        <a href="#pop-up1" class="surprise_link">Know More</a>
+                    </div>
+                  </div>
+                  <div id="pop-up1">
+                      <div class="pop-up_box">
+                        <div><img src="..\Assignment1\5.jpg" alt="img1" class=" image-popup"></div>
+                        <div class="pop-up_text">
+                            <div class="pop-up_head">TERMS AND CONDITIONS</div>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit excepturi quod facilis quia reprehenderit? 
+                                Alias eos ipsum aliquam nisi tempore, 
+                                cumque quas libero laborum ipsa mollitia tempora commodi deserunt velit!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aperiam inventore quisquam modi 
+                                blanditiis fuga voluptatibus omnis soluta ex, dicta deserunt accusamus a, 
+                                iusto tempora asperiores dolorem eius consectetur possimus.
+                            </div>
+                        </div>
+                          <a href="#surprise" class="pop-up_close link">&times;</a>
+                      </div>
+                  </div>
+                  <div class="surprise_box">
+                    <div><img src="..\Assignment1\10.jpg" alt="img2" class="surprise_image"></div>
+                    <div class="surprise_text">Titan Deluxe</div>
+                    <div class="surprise_text"><strike><span>&#8377</span>5000</strike></div>
+                    <div class="surprise_text"><span>&#8377</span>2000</div>
+                    <div class="surprise_button">
+                        <a href="#pop-up2" class="surprise_link">Know More</a>
+                    </div>
+
+                  </div>
+                  <div id="pop-up2">
+                    <div class="pop-up_box">
+                      <div><img src="..\Assignment1\10.jpg" alt="img1" class=" image-popup"></div>
+                      <div class="pop-up_text">
+                          <div class="pop-up_head">TERMS AND CONDITIONS</div>
+                          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit excepturi quod facilis quia reprehenderit? 
+                              Alias eos ipsum aliquam nisi tempore, 
+                              cumque quas libero laborum ipsa mollitia tempora commodi deserunt velit!
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aperiam inventore quisquam modi 
+                              blanditiis fuga voluptatibus omnis soluta ex, dicta deserunt accusamus a, 
+                              iusto tempora asperiores dolorem eius consectetur possimus.
+                          </div>
+                      </div>
+                        <a href="#surprise" class="pop-up_close link">&times;</a>
+                    </div>
+                </div>
+                  <div class="surprise_box">
+                    <div><img src="..\Assignment1\13.jpg" alt="img3" class="surprise_image"></div>
+                    <div class="surprise_text">Siyaram's shirt</div>
+                    <div class="surprise_text"><strike><span>&#8377</span>4000</strike></div>
+                    <div class="surprise_text"><span>&#8377</span>1500</div>
+                    <div class="surprise_button">
+                        <a href="#pop-up3" class="surprise_link">Know More</a>
+                    </div>
+                  </div>
+                  <div id="pop-up3">
+                    <div class="pop-up_box">
+                      <div><img src="..\Assignment1\13.jpg" alt="img1" class=" image-popup"></div>
+                      <div class="pop-up_text">
+                          <div class="pop-up_head">TERMS AND CONDITIONS</div>
+                          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit excepturi quod facilis quia reprehenderit? 
+                              Alias eos ipsum aliquam nisi tempore, 
+                              cumque quas libero laborum ipsa mollitia tempora commodi deserunt velit!
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aperiam inventore quisquam modi 
+                              blanditiis fuga voluptatibus omnis soluta ex, dicta deserunt accusamus a, 
+                              iusto tempora asperiores dolorem eius consectetur possimus.
+                          </div>
+                      </div>
+                        <a href="#surprise" class="pop-up_close link">&times;</a>
+                    </div>
+                </div>
+             </div>
+            </div>
+
+            <div id="PID">
+                <div class="heading">PRODUCTS IN DEMAND</div>
+                <div class="PID_box">
+                    <div><img src="..\Assignment1\apple_mac.jpg" alt="img3" class="PID_image"></div>
+                    <div class="surprise_text">Apple Macbook</div>
+                    <div class="surprise_text"><span>&#8377</span>59999</div>
+                    <div>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size"></span>
+                    </div>    
+                </div>
+
+                <div class="PID_box">
+                    <div><img src="..\Assignment1\6_pro.jpg" alt="img3" class="PID_image"></div>
+                    <div class="surprise_text">Realme 6PRO</div>
+                    <div class="surprise_text"><span>&#8377</span>16599</div>
+                    <div>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                    </div>    
+                </div>
+
+                <div class="PID_box">
+                    <div><img src="..\Assignment1\alchemist.jpg" alt="img3" class="PID_image"></div>
+                    <div class="surprise_text">The Alchemist</div>
+                    <div class="surprise_text"><span>&#8377</span>349</div>
+                    <div>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size "></span>
+                        <span class="fa fa-star star_size"></span>
+                    </div>    
+                </div>
+
+                <div class="PID_box">
+                    <div><img src="..\Assignment1\ipad.jfif" alt="img3" class="PID_image"></div>
+                    <div class="surprise_text">Apple Ipad</div>
+                    <div class="surprise_text"><span>&#8377</span>72999</div>
+                    <div>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                    </div>    
+                </div>
+
+                
+            
+
+            
+                <div class="PID_box">
+                    <div><img src="..\Assignment1\led.jpg" alt="img3" class="PID_image"></div>
+                    <div class="surprise_text">SAMSUNG OLED X30</div>
+                    <div class="surprise_text"><span>&#8377</span>89999</div>
+                    <div>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size"></span>
+                    </div>    
+                </div>
+
+                <div class="PID_box">
+                    <div><img src="..\Assignment1\HCV.jpeg" alt="img3" class="PID_image"></div>
+                    <div class="surprise_text">The Concepts Of Physics</div>
+                    <div class="surprise_text"><span>&#8377</span>299</div>
+                    <div>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size"></span>
+                    </div>    
+                </div>
+
+                <div class="PID_box">
+                    <div><img src="..\Assignment1\3.jpg" alt="img3" class="PID_image"></div>
+                    <div class="surprise_text">Sony DSLR L25</div>
+                    <div class="surprise_text"><span>&#8377</span>34999</div>
+                    <div>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size "></span>
+                        <span class="fa fa-star star_size"></span>
+                    </div>    
+                </div>
+
+                <div class="PID_box">
+                    <div><img src="..\Assignment1\12.jpg" alt="img3" class="PID_image"></div>
+                    <div class="surprise_text">ROLEX Super Delux</div>
+                    <div class="surprise_text"><span>&#8377</span>8999</div>
+                    <div>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                    </div>    
+                </div>
+               
+            
+
+            
+
+                <div class="PID_box">
+                    <div><img src="..\Assignment1\pigeon750.jpg" alt="img3" class="PID_image"></div>
+                    <div class="surprise_text">Pigeon mixer 750</div>
+                    <div class="surprise_text"><span>&#8377</span>5499</div>
+                    <div>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size"></span>
+                    </div>    
+                </div>
+               
+                <div class="PID_box">
+                    <div><img src="..\Assignment1\14.jpg" alt="img3" class="PID_image"></div>
+                    <div class="surprise_text">Raymond Shirt</div>
+                    <div class="surprise_text"><span>&#8377</span>3499</div>
+                    <div>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size checked"></span>
+                        <span class="fa fa-star star_size"></span>
+                        <span class="fa fa-star star_size"></span>
+                    </div>    
+                </div>
+            </div>
+
+            <div id="reviews">
+                <div class="heading">OUR HAPPY CUSTOMERS</div>
+                <div class="rev-box">
+                    <div class="patch">
+                      <div class="patch-text">Tony Stark</div>
+                    </div>
+                    <div><img src="../Assignment1/tony_stark.jpg" class="rev-img" alt="img"></div>
+                    <div class="rev-text">
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo porro tempora minima,
+                             molestiae enim sunt ducimus accusamus delectus doloremque vero suscipit illum ea exercitationem
+                              libero in culpa beatae, 
+                             pariatur consequuntur.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews1">
+                <div class="rev-box">
+                    <div class="patch">
+                      <div class="patch-text">Ketty Simon</div>
+                    </div>
+                    <div><img src="../Assignment1/ketty_simon.jfif" class="rev-img" alt="img"></div>
+                    <div class="rev-text">
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo porro tempora minima,
+                             molestiae enim sunt ducimus accusamus delectus doloremque vero suscipit illum ea exercitationem
+                              libero in culpa beatae, 
+                             pariatur consequuntur.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews1">
+                <div class="rev-box">
+                    <div class="patch">
+                      <div class="patch-text">John Joshua</div>
+                    </div>
+                    <div><img src="../Assignment1/john_joshua.jfif" class="rev-img" alt="img"></div>
+                    <div class="rev-text">
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo porro tempora minima,
+                             molestiae enim sunt ducimus accusamus delectus doloremque vero suscipit illum ea exercitationem
+                              libero in culpa beatae, 
+                             pariatur consequuntur.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="add_rev">
+                <div class="heading" style="text-align: center;">ADD REVIEW</div>
+                <div class="rev-box">
+                    <form>
+                        <div><label for="fname">First Name</label></div>
+                        <div><input type="text" id="fname" name="firstname" placeholder="Your first name..."></div>
+                        <div><label for="lname">Last Name</label></div>
+                        <div><input type="text" id="lname" name="lastname" placeholder="Your last name..."></div>
+                        <div><label for="review">Review</label></div>
+                        <div><textarea id="review" name="review" placeholder="Write your review here..."></textarea> </div>
+                        <div><input type="submit" value="Submit"></div>
+                    </form>
+                </div>
+           </div>
+       
+
+        </div>
+        <div id="footer">
+            <div class="brand">Lifestyle Store</div>
+            <div class="copyright1">&copy 2020 Lifestyle Store.</div>
+            <div class="copyright2">All rights reserved.</div>
+            <div><a href="#" class="link1">Contact Us</a></div>
+            <div><a href="#" class="link2">Privacy Policy</a></div>
+            <div><a href="#" class="link3">Terms and Conditions</a></div>
+        </div>
+
+        <div class="button2">
+            <a class="button2-link" href="#intro">Back To The Top</a>
+        </div>
+        
+        
+
+   </body>
+
+
+</html>
